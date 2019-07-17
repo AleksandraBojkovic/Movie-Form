@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Movie Form</title>
+    <link rel="stylesheet" href="./css/main.css" />
+</head>
+
+<body>
+    <main>
+    <div class="container">
+
+        <form class="movie-form">
+            <fieldset>
+                <legend>Movie</legend>
+                <div class="input-field">
+                    <input id="title" type="text" class="validate" />
+                    <label for="title">Title</label>
+                </div>
+                <div class="input-field">
+                    <input id="length" type="number" class="validate" />
+                    <label for="length">Length(min)</label>
+                </div>
+
+                <div class="input-field">
+                    <select id="genre">
+                        <option value="" disabled selected>Choose genre</option>
+                        <option value="drama">Drama</option>
+                        <option value="comedy">Comedy</option>
+                        <option value="thriller">Thriller</option>
+                        <option value="action">Action</option>
+                        <option value="horror">Horror</option>
+                    </select>
+                    <label>Genre</label>
+                </div>
+
+                <div id='movie-error' class="">
+                </div>
+
+                <button id="create-movie" class="btn waves-effect waves-light" type="submit" name="action">Create
+                    movie</button>
+
+                <div id="movie-list" class="">
+                    <ul id="created-movies"></ul>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Program</legend>
+
+                <div class="input-field">
+                    <input id="program-date" type="date" class="validate" />
+                    <label class='active' for="program-date">Date</label>
+                </div>
+
+                <div id='program-error' class="">
+                </div>
+
+                <button id="create-program" class="btn waves-effect waves-light" type="submit" name="action">Create
+                    program</button>
+
+                <div id="program-list">
+                    <ul id="created-programs"></ul>
+                </div>
+
+                <hr>
+
+                <div class="input-field">
+                    <select id="movie-select">
+                        <option value="" selected>Choose movie</option>
+                    </select>
+                    <label>Movies</label>
+                </div>
+
+                <div class="input-field">
+                    <select id="program-select">
+                        <option value="" selected>Choose program</option>
+                    </select>
+                    <label>Program</label>
+                </div>
+
+                <div id='assign-error' class="">
+                </div>
+
+                <button id="add-movie" class="btn waves-effect waves-light" type="submit" name="action">Add movie to
+                    program</button>
+            </fieldset>
+        </form>
+
+
+
+    </div>
+</main>
+
+    <script src="./js/app.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function (event) {
+            console.log("DOM fully loaded and parsed");
+            console.log("Init app");
+            controller.init()
+        });
+    </script>
+    <!-- <script src="./js/entities.js"></script>
+    <script src="./js/form.js"></script> -->
+</body>
+
+</html>
